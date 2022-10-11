@@ -1,1 +1,112 @@
-var Jsl_0x424d4d=Jsl_0x294a;function Jsl_0x1bf0(){var _0x3dda98=['11072kTrYcT','match','jid','214WrpUQR','.reboot','owner','PLUGIN_NOT_FOUND','2841587xLiCWA','*\x20:\x20','unlinkSync','338310dFIYRi','18kDCBgV','toString','resolve','url','test','?timestamp=','host','1530YdyeAs','INVALID_URL','map','./misc/lang','installPlugin','axios','filter','869544qxAmCp','PluginDB','gist.githubusercontent.com','gist.github.com','NEED_PLUGIN','data','replace','reply','join','sendMessage','dataValues','DELETED','_Invalid\x20plugin.\x20No\x20plugin\x20name\x20found!_','NO_PLUGIN','/raw','name','INSTALLED','destroy','../lib/db/plugin','./plugins/','303456fumaPW','../lib/','pattern','external_plugin','.js','4111816gFyMVW','length','remove(?:\x20|$)(.*)','install\x20?(.*)','20kysmoJ','text','Restart','268059fcHCTx','split','cache','client','writeFileSync','INVALID_PLUGIN','/root/Abu/plugins/'];Jsl_0x1bf0=function(){return _0x3dda98;};return Jsl_0x1bf0();}(function(_0x4210fa,_0xd71d1){var _0x44baf9=Jsl_0x294a,_0x2c44fd=_0x4210fa();while(!![]){try{var _0x389408=-parseInt(_0x44baf9(0xde))/0x1*(parseInt(_0x44baf9(0xe1))/0x2)+-parseInt(_0x44baf9(0xcb))/0x3+-parseInt(_0x44baf9(0xf7))/0x4*(parseInt(_0x44baf9(0xd4))/0x5)+parseInt(_0x44baf9(0xe9))/0x6*(-parseInt(_0x44baf9(0xe5))/0x7)+parseInt(_0x44baf9(0xd0))/0x8+-parseInt(_0x44baf9(0xe8))/0x9+parseInt(_0x44baf9(0xf0))/0xa*(parseInt(_0x44baf9(0xd7))/0xb);if(_0x389408===_0xd71d1)break;else _0x2c44fd['push'](_0x2c44fd['shift']());}catch(_0x22bc88){_0x2c44fd['push'](_0x2c44fd['shift']());}}}(Jsl_0x1bf0,0xcb085));const {Module}=require(Jsl_0x424d4d(0xcc)),Config=require('../config'),axios=require(Jsl_0x424d4d(0xf5)),fs=require('fs'),Db=require(Jsl_0x424d4d(0xc9));function Jsl_0x294a(_0x3e53a4,_0xe6b671){var _0x1bf0ab=Jsl_0x1bf0();return Jsl_0x294a=function(_0x294a1c,_0x244e3c){_0x294a1c=_0x294a1c-0xc6;var _0x451fab=_0x1bf0ab[_0x294a1c];return _0x451fab;},Jsl_0x294a(_0x3e53a4,_0xe6b671);}let {getString}=require(Jsl_0x424d4d(0xf3)),Lang=getString(Jsl_0x424d4d(0xce));Module({'pattern':Jsl_0x424d4d(0xd3),'fromMe':!![],'type':Jsl_0x424d4d(0xe3),'desc':Lang['INSTALL_DESC']},async(_0x77efa8,_0xbee3c3)=>{var _0x3a34cc=Jsl_0x424d4d;_0xbee3c3=_0xbee3c3[0x1]!==''?_0xbee3c3[0x1]:_0x77efa8['reply_message'][_0x3a34cc(0xd5)];if(!_0xbee3c3||!/\bhttps?:\/\/\S+/gi[_0x3a34cc(0xed)](_0xbee3c3))return await _0x77efa8[_0x3a34cc(0x100)](Lang['NEED_URL']);let _0x1f9b2a=_0xbee3c3[_0x3a34cc(0xdf)](/\bhttps?:\/\/\S+/gi);for(let _0xaef45f of _0x1f9b2a){try{var _0xdddcbf=new URL(_0xaef45f);}catch{return await _0x77efa8['sendMessage'](Lang[_0x3a34cc(0xf1)]);}_0xdddcbf[_0x3a34cc(0xef)]===_0x3a34cc(0xfa)?(_0xdddcbf[_0x3a34cc(0xef)]=_0x3a34cc(0xf9),_0xdddcbf=_0xdddcbf[_0x3a34cc(0xea)]()+_0x3a34cc(0x105)):_0xdddcbf=_0xdddcbf['toString']();try{var _0x511107=await axios(_0xdddcbf+_0x3a34cc(0xee)+new Date());}catch{return await _0x77efa8[_0x3a34cc(0x100)](Lang[_0x3a34cc(0xf1)]);}let _0x1ede94=/pattern: ["'](.*)["'],/g['exec'](_0x511107[_0x3a34cc(0xfc)]);var _0x76b423=_0x511107[_0x3a34cc(0xfc)][_0x3a34cc(0xdf)](/pattern: ["'](.*)["'],/g)?_0x511107['data']['match'](/pattern: ["'](.*)["'],/g)['map'](_0x5b7c9d=>_0x5b7c9d[_0x3a34cc(0xfd)](_0x3a34cc(0xcd),'')['replace'](/[^a-zA-Z]/g,'')):'temp';try{_0x1ede94=_0x1ede94[0x1][_0x3a34cc(0xd8)]('\x20')[0x0];}catch{return await _0x77efa8[_0x3a34cc(0xfe)](_0x3a34cc(0x103));}fs[_0x3a34cc(0xdb)](_0x3a34cc(0xca)+_0x1ede94+_0x3a34cc(0xcf),_0x511107['data']);try{require('./'+_0x1ede94);}catch(_0x4d114c){return fs[_0x3a34cc(0xe7)](_0x3a34cc(0xdd)+_0x1ede94+_0x3a34cc(0xcf)),await _0x77efa8[_0x3a34cc(0xfe)](Lang[_0x3a34cc(0xdc)]+_0x4d114c);}await Db[_0x3a34cc(0xf4)](_0xdddcbf,_0x1ede94),await _0x77efa8['sendMessage'](Lang[_0x3a34cc(0xc7)]['format'](_0x76b423[_0x3a34cc(0xff)](',\x20')));}}),Module({'pattern':'plugin\x20?(.*)','fromMe':!![],'type':'owner','desc':Lang['PLUGIN_DESC']},async(_0x1c83d9,_0x1f9ed8)=>{var _0x1c96cc=Jsl_0x424d4d,_0xa908b=await Db[_0x1c96cc(0xf8)]['findAll']();if(_0x1f9ed8[0x1]!==''){var _0xca43c2=_0xa908b[_0x1c96cc(0xf6)](_0x350da0=>_0x350da0[_0x1c96cc(0x101)]['name']===_0x1f9ed8[0x1]);try{await _0x1c83d9['reply'](_0xca43c2['dataValues'][_0x1c96cc(0xc6)]+':\x20'+_0xca43c2['dataValues'][_0x1c96cc(0xec)]);}catch{return await _0x1c83d9[_0x1c96cc(0xfe)](Lang[_0x1c96cc(0xe4)]);}return;}var _0x2c1018=Lang['INSTALLED_PLUGINS'],_0xa908b=await Db[_0x1c96cc(0xf8)]['findAll']();return _0xa908b['length']<0x1?await _0x1c83d9[_0x1c96cc(0x100)](Lang['NO_PLUGIN']):(_0xa908b[_0x1c96cc(0xf2)](_0x4f03eb=>{var _0x39de48=_0x1c96cc;_0x2c1018+='*'+_0x4f03eb[_0x39de48(0x101)][_0x39de48(0xc6)]+_0x39de48(0xe6)+_0x4f03eb[_0x39de48(0x101)]['url']+'\x0a\x0a';}),await _0x1c83d9['reply'](_0x2c1018));}),Module({'pattern':Jsl_0x424d4d(0xd2),'fromMe':!![],'type':'owner','desc':Lang['REMOVE_DESC']},async(_0x431c4a,_0x5c30ad)=>{var _0x1d5a9b=Jsl_0x424d4d;if(_0x5c30ad[0x1]==='')return await _0x431c4a[_0x1d5a9b(0x100)](Lang[_0x1d5a9b(0xfb)]);var _0x10eca0=await Db[_0x1d5a9b(0xf8)]['findAll']({'where':{'name':_0x5c30ad[0x1]}});if(_0x10eca0[_0x1d5a9b(0xd1)]<0x1)return await _0x431c4a[_0x1d5a9b(0x100)](Lang[_0x1d5a9b(0x104)]);else{await _0x10eca0[0x0][_0x1d5a9b(0xc8)](),delete require[_0x1d5a9b(0xd9)][require[_0x1d5a9b(0xeb)]('./'+_0x5c30ad[0x1]+_0x1d5a9b(0xcf))],fs[_0x1d5a9b(0xe7)](_0x1d5a9b(0xca)+_0x5c30ad[0x1]+'.js');const _0x528013=[{'buttonId':_0x1d5a9b(0xe2),'buttonText':{'displayText':_0x1d5a9b(0xd6)},'type':0x1}],_0x209476={'text':Lang[_0x1d5a9b(0x102)]['format'](_0x5c30ad[0x1]),'footer':'_Restart\x20to\x20make\x20effect_','buttons':_0x528013,'headerType':0x1};await _0x431c4a[_0x1d5a9b(0xda)]['sendMessage'](_0x431c4a[_0x1d5a9b(0xe0)],_0x209476);}});
+const {
+    Module
+} = require('../lib/');
+const Config = require('../config');
+const axios = require('axios');
+const fs = require('fs');
+const Db = require('./lib/db/plugin');
+let {
+    getString
+} = require('./misc/lang');
+let Lang = getString('external_plugin');
+
+Module({
+    pattern: 'install ?(.*)',
+    fromMe: true,
+    type: 'owner',
+    desc: Lang.INSTALL_DESC
+}, (async (message, match) => {
+    match = match[1]!==""?match[1]:message.reply_message.text
+    if (!match || !/\bhttps?:\/\/\S+/gi.test(match)) return await message.sendMessage(Lang.NEED_URL)
+    let links = match.match(/\bhttps?:\/\/\S+/gi);
+    for (let link of links){
+    try {
+        var url = new URL(link);
+    } catch {
+        return await message.sendMessage(Lang.INVALID_URL);
+    }
+    if (url.host === 'gist.github.com') {
+        url.host = 'gist.githubusercontent.com';
+        url = url.toString() + '/raw'
+    } else {
+        url = url.toString()
+    }
+    try {
+        var response = await axios(url+"?timestamp="+new Date());
+    } catch {
+        return await message.sendMessage(Lang.INVALID_URL)
+    }
+    let plugin_name = /pattern: ["'](.*)["'],/g.exec(response.data)
+    var plugin_name_temp = response.data.match(/pattern: ["'](.*)["'],/g)?response.data.match(/pattern: ["'](.*)["'],/g).map(e=>e.replace("pattern","").replace(/[^a-zA-Z]/g, "")):"temp"
+    try { plugin_name = plugin_name[1].split(" ")[0] } catch { return await message.reply("_Invalid plugin. No plugin name found!_") }
+    fs.writeFileSync('./plugins/' + plugin_name + '.js', response.data);
+    try {
+        require('./' + plugin_name);
+    } catch (e) {
+        fs.unlinkSync('/root/Abu/plugins/' + plugin_name + '.js')
+        return await message.reply(Lang.INVALID_PLUGIN + e);
+    }
+    await Db.installPlugin(url, plugin_name);
+    await message.sendMessage(Lang.INSTALLED.format(plugin_name_temp.join(", ")));
+}
+}));
+
+Module({
+    pattern: 'plugin ?(.*)',
+    fromMe: true,
+    type: 'owner',
+    desc: Lang.PLUGIN_DESC
+}, (async (message, match) => {
+    var plugins = await Db.PluginDB.findAll();
+    if (match[1] !== '') {
+        var plugin = plugins.filter(_plugin => _plugin.dataValues.name === match[1])
+        try {
+            await message.reply(plugin.dataValues.name + ": " + plugin.dataValues.url);
+        } catch {
+            return await message.reply(Lang.PLUGIN_NOT_FOUND)
+        }
+        return;
+    }
+    var msg = Lang.INSTALLED_PLUGINS;
+    var plugins = await Db.PluginDB.findAll();
+    if (plugins.length < 1) {
+        return await message.sendMessage(Lang.NO_PLUGIN);
+    } else {
+        plugins.map(
+            (plugin) => {
+                msg += '*' + plugin.dataValues.name + '* : ' + plugin.dataValues.url + '\n\n';
+            }
+        );
+        return await message.reply(msg);
+    }
+}));
+
+Module({
+    pattern: 'remove(?: |$)(.*)',
+    fromMe: true,
+    type: 'owner',
+    desc: Lang.REMOVE_DESC
+}, (async (message, match) => {
+    if (match[1] === '') return await message.sendMessage(Lang.NEED_PLUGIN);
+    var plugin = await Db.PluginDB.findAll({
+        where: {
+            name: match[1]
+        }
+    });
+    if (plugin.length < 1) {
+        return await message.sendMessage(Lang.NO_PLUGIN);
+    } else {
+        await plugin[0].destroy();
+        delete require.cache[require.resolve('./' + match[1] + '.js')]
+        fs.unlinkSync('./plugins/' + match[1] + '.js');
+    const buttons = [{buttonId: '.reboot', buttonText: {displayText: 'Restart'}, type: 1}]
+          
+          const buttonMessage = {
+              text: Lang.DELETED.format(match[1]),
+              footer: '_Restart to make effect_',
+              buttons: buttons,
+              headerType: 1
+          }
+        await message.client.sendMessage(message.jid,buttonMessage);
+    }
+}));
