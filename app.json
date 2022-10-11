@@ -58,9 +58,11 @@
             "description": "Exact name which you gave at the top",
             "required": true,
             "value": ""
-        }
-    },
-    "addons": [{
-        "plan": "heroku-postgresql"
-    }]
+}
+  },
+  "addons": [
+    {
+      "plan": "heroku-postgresql"
+    }
+  ]
 }
