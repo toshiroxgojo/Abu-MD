@@ -4,7 +4,7 @@ const {
 const Config = require('../config');
 const axios = require('axios');
 const fs = require('fs');
-const Db = require('../lib/db/plugin');
+const Db = require('../lib/db/plugins');
 let {
     getString
 } = require('../lib/misc/lang');
