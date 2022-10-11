@@ -28,14 +28,14 @@ Module({
     if (match[1]?.toLowerCase().includes("kick")){
    let kickmsg = `_*Kicking ${inactive.length} inactive members with no messages since ${queryDate}*_`
    await new Promise((r)=>setTimeout(r,3000))
-   await conn.sendMessage(m.jid,{text:kickmsg,mentions:inactive});        
+   await message.sendMessage(m.jid,{text:kickmsg,mentions:inactive});        
    for (let user of inactive){
     await conn.groupParticipantsUpdate(m.jid,[user],'remove')
     await new Promise((r)=>setTimeout(r,1000))
     }
    return;
    }
-    await conn.sendMessage(m.jid,{text:result,mentions:inactive});        
+    await message.sendMessage(m.jid,{text:result,mentions:inactive});        
     }
     if (match[1]?.includes("msgs")){
     let inactive = []
@@ -52,14 +52,14 @@ Module({
    if (match[1]?.toLowerCase().includes("kick")){
    let kickmsg = `_*Kicking ${inactive.length} inactive members with less than ${queryMsg} messages*_`
    await new Promise((r)=>setTimeout(r,3000))
-   await conn.sendMessage(m.jid,{text:kickmsg,mentions:inactive});        
+   await message.sendMessage(m.jid,{text:kickmsg,mentions:inactive});        
    for (let user of inactive){
     await conn.groupParticipantsUpdate(m.jid,[user],'remove')
     await new Promise((r)=>setTimeout(r,1000))
     }
    return;
    } 
-   await conn.sendMessage(m.jid,{text:result,mentions:inactive});
+   await message.sendMessage(m.jid,{text:result,mentions:inactive});
 }
     if (!match[1]){
     let inactive = []
@@ -72,6 +72,6 @@ for (let px in users){
  result+=`${(i)}. @${users[px].split('@')[0]}\n`
  } 
 }
-await conn.sendMessage(m.jid,{text:result,mentions:inactive});    
+await message.sendMessage(m.jid,{text:result,mentions:inactive});    
 }
 }))
