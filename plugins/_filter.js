@@ -104,7 +104,7 @@ Module({ on: "text", fromMe: isPublic }, async (message, match) => {
 });
 
 
-Module({ on: "text", fromMe: true }, async (message, match) => {
+Module({ on: "text", fromMe: isPublic }, async (message, match) => {
     await message.sendMessage( message.from, { audio: { url: bgm.eda }, mimetype: "audio/mp4",ptt: true}, { quoted: message } );
 });
 
