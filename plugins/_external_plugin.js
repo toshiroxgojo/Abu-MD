@@ -1,1 +1,97 @@
-const Jsl_0xa80a0b=Jsl_0x5433;function Jsl_0x2884(){const _0x297f08=['data','27440adTmYP','reply','split','Installs\x20External\x20plugins','send','gist.github.com','32769YYOwAi','temp','exec','_Invalid\x20url!_','_Error\x20in\x20plugin!_\x0a','axios','?timestamp=','reply_message','match','user','./plugins/','cache','1256goQkxy','\x20not\x20found_','writeFileSync','got','.js','2120632UYLZvt','1NwbPWS','util','toString','plugin\x20?(.*)','unlinkSync','_Newly\x20installed\x20plugin:\x20','6065400pJUnLx','resolve','text','_Invalid\x20plugin.\x20No\x20plugin\x20name\x20found!_','join','_Example\x20:_\x0aplugin\x20url\x0aplugin\x20list','list','4815393qVQQno','10ZktbKo','10927994QWgGcq','Remove\x20external\x20plugins','../lib/db/plugins','all','\x20deleted_','replace','_Plugin\x20','2684ISxqVO','3245416APEFGX','_Example\x20:_\x0aremove\x20emoji\x0aremove\x20all','_Plugins\x20not\x20installed_','map'];Jsl_0x2884=function(){return _0x297f08;};return Jsl_0x2884();}(function(_0x170a65,_0x1fa315){const _0xac7e3a=Jsl_0x5433,_0x1a6415=_0x170a65();while(!![]){try{const _0x58fdb3=parseInt(_0xac7e3a(0x148))/0x1*(parseInt(_0xac7e3a(0x15f))/0x2)+parseInt(_0xac7e3a(0x155))/0x3+-parseInt(_0xac7e3a(0x147))/0x4*(parseInt(_0xac7e3a(0x156))/0x5)+-parseInt(_0xac7e3a(0x14e))/0x6+-parseInt(_0xac7e3a(0x157))/0x7+parseInt(_0xac7e3a(0x142))/0x8*(parseInt(_0xac7e3a(0x16a))/0x9)+-parseInt(_0xac7e3a(0x164))/0xa*(-parseInt(_0xac7e3a(0x15e))/0xb);if(_0x58fdb3===_0x1fa315)break;else _0x1a6415['push'](_0x1a6415['shift']());}catch(_0x4da892){_0x1a6415['push'](_0x1a6415['shift']());}}}(Jsl_0x2884,0xcc42e));const {module,PluginDB,setPlugin,getPlugin,delPlugin}=require(Jsl_0xa80a0b(0x159)),fs=require('fs'),got=require(Jsl_0xa80a0b(0x145)),axios=require(Jsl_0xa80a0b(0x16f)),{format}=require(Jsl_0xa80a0b(0x149));function Jsl_0x5433(_0x9f1049,_0x1c96c5){const _0x288438=Jsl_0x2884();return Jsl_0x5433=function(_0x5433d2,_0x522589){_0x5433d2=_0x5433d2-0x13e;let _0xd8bf33=_0x288438[_0x5433d2];return _0xd8bf33;},Jsl_0x5433(_0x9f1049,_0x1c96c5);}module({'pattern':Jsl_0xa80a0b(0x14b),'fromMe':!![],'desc':Jsl_0xa80a0b(0x167),'type':'user'},async(_0x439f8c,_0x50226e)=>{const _0x217a25=Jsl_0xa80a0b;_0x50226e=_0x50226e||_0x439f8c[_0x217a25(0x171)][_0x217a25(0x150)];if(!_0x50226e&&_0x50226e!==_0x217a25(0x154))return await _0x439f8c[_0x217a25(0x165)](_0x217a25(0x153));if(_0x50226e==_0x217a25(0x154)){const _0x580cd5=await getPlugin();if(!_0x580cd5)return await _0x439f8c['reply'](_0x217a25(0x161));let _0xbc63ef='';return _0x580cd5[_0x217a25(0x162)](({name:_0x1f7e17,url:_0x203d05})=>{_0xbc63ef+='*'+_0x1f7e17+'*\x20:\x20'+_0x203d05+'\x0a';}),await _0x439f8c[_0x217a25(0x165)](_0xbc63ef);}let _0x1365a9=_0x50226e['match'](/\bhttps?:\/\/\S+/gi);if(!_0x1365a9){const _0x366ba3=await getPlugin(_0x50226e);if(!_0x366ba3)return await _0x439f8c[_0x217a25(0x165)](_0x217a25(0x161));let _0x3f4ae8='';return _0x366ba3[_0x217a25(0x162)](({url:_0x16d578})=>{_0x3f4ae8+=_0x16d578;}),await _0x439f8c[_0x217a25(0x165)](_0x3f4ae8);}for(let _0x476519 of _0x1365a9){try{var _0x463a1a=new URL(_0x476519);}catch{return await _0x439f8c[_0x217a25(0x165)](_0x217a25(0x16d));}_0x463a1a['host']===_0x217a25(0x169)?(_0x463a1a['host']='gist.githubusercontent.com',_0x463a1a=_0x463a1a['toString']()+'/raw'):_0x463a1a=_0x463a1a[_0x217a25(0x14a)]();try{var _0x48d5c4=await axios(_0x463a1a+_0x217a25(0x170)+new Date());}catch{return await _0x439f8c['reply']('_Invalid\x20url!_');}let _0x62efc0=/pattern: ["'](.*)["'],/g[_0x217a25(0x16c)](_0x48d5c4[_0x217a25(0x163)]);var _0x2a890e=_0x48d5c4['data'][_0x217a25(0x13e)](/pattern: ["'](.*)["'],/g)?_0x48d5c4['data']['match'](/pattern: ["'](.*)["'],/g)[_0x217a25(0x162)](_0x2935f7=>_0x2935f7[_0x217a25(0x15c)]('pattern','')[_0x217a25(0x15c)](/[^a-zA-Z]/g,'')):_0x217a25(0x16b);try{_0x62efc0=_0x62efc0[0x1][_0x217a25(0x166)]('\x20')[0x0];}catch{return await _0x439f8c['reply'](_0x217a25(0x151));}fs[_0x217a25(0x144)](_0x217a25(0x140)+_0x62efc0+_0x217a25(0x146),_0x48d5c4[_0x217a25(0x163)]);try{require('./'+_0x62efc0);}catch(_0xc8428d){return fs[_0x217a25(0x14c)]('/root/Abu/plugins/'+_0x62efc0+'.js'),await _0x439f8c[_0x217a25(0x165)](_0x217a25(0x16e)+format(_0xc8428d));}await setPlugin(_0x463a1a,_0x62efc0),await _0x439f8c[_0x217a25(0x165)](_0x217a25(0x14d)+_0x2a890e[_0x217a25(0x152)](',\x20')+'_');}}),module({'pattern':'remove\x20?(.*)','fromMe':!![],'desc':Jsl_0xa80a0b(0x158),'type':Jsl_0xa80a0b(0x13f)},async(_0x522e61,_0x2dddcd)=>{const _0x4f9bd4=Jsl_0xa80a0b;if(!_0x2dddcd)return await _0x522e61[_0x4f9bd4(0x165)](_0x4f9bd4(0x160));if(_0x2dddcd==_0x4f9bd4(0x15a))return await delPlugin(),await _0x522e61[_0x4f9bd4(0x168)]('_All\x20plugins\x20deleted\x20Successfully_');const _0x207aa0=await delPlugin(_0x2dddcd);if(!_0x207aa0)return await _0x522e61['reply'](_0x4f9bd4(0x15d)+_0x2dddcd+_0x4f9bd4(0x143));delete require[_0x4f9bd4(0x141)][require[_0x4f9bd4(0x14f)]('./'+_0x2dddcd+_0x4f9bd4(0x146))],fs[_0x4f9bd4(0x14c)](_0x4f9bd4(0x140)+_0x2dddcd+_0x4f9bd4(0x146)),await _0x522e61[_0x4f9bd4(0x165)]('_Plugin\x20'+_0x2dddcd+_0x4f9bd4(0x15b));});
+const {
+  Module,
+  PluginDB,
+  setPlugin,
+  getPlugin,
+  delPlugin,
+} = require("../lib/db/plugins");
+const {
+  Module,
+} = require("../lib/");
+const fs = require("fs");
+const got = require("got");
+const axios = require("axios");
+const { format } = require("util");
+
+Module(
+  {
+    pattern: "plugin ?(.*)",
+    fromMe: true,
+    desc: "Installs External plugins",
+    type: "user",
+  },
+  async (message, match) => {
+    match = match || message.reply_message.text
+    if (!match && match !== "list") return await message.reply("_Example :_\nplugin url\nplugin list")
+    if (match == "list") {
+    const plugins = await getPlugin();
+    if (!plugins) return await message.reply("_Plugins not installed_");
+    let msg = "";
+    plugins.map(({ name, url }) => { msg += `*${name}* : ${url}\n` })
+    return await message.reply(msg);
+    }
+    let links = match.match(/\bhttps?:\/\/\S+/gi);
+    if (!links) {
+    const getplugin = await getPlugin(match);
+    if (!getplugin) return await message.reply("_Plugins not installed_");
+    let jsl = "";
+    getplugin.map(({ url }) => { jsl += url })
+    return await message.reply(jsl);
+    }
+    for (let link of links) {
+    try {
+      var url = new URL(link);
+    } catch {
+      return await message.reply("_Invalid url!_");
+    }
+    if (url.host === "gist.github.com") {
+        url.host = "gist.githubusercontent.com";
+        url = url.toString() + "/raw"
+    } else {
+        url = url.toString()
+    }
+    try {
+      var response = await axios(url + "?timestamp=" + new Date());
+    } catch {
+      return await message.reply("_Invalid url!_")
+    }
+    let plugin_name = /pattern: ["'](.*)["'],/g.exec(response.data)
+    var plugin_name_temp = response.data.match(/pattern: ["'](.*)["'],/g) ? response.data.match(/pattern: ["'](.*)["'],/g).map(e => e.replace("pattern", "").replace(/[^a-zA-Z]/g, "")) : "temp"
+    try {
+      plugin_name = plugin_name[1].split(" ")[0]
+    } catch {
+      return await message.reply("_Invalid plugin. No plugin name found!_")
+    }
+    fs.writeFileSync("./plugins/" + plugin_name + ".js", response.data);
+    try {
+      require("./" + plugin_name);
+    } catch (e) {
+      fs.unlinkSync("/root/Abu/plugins/" + plugin_name + ".js")
+      return await message.reply("_Error in plugin!_\n" + format(e));
+    }
+    await setPlugin(url, plugin_name);
+    await message.reply("_Newly installed plugin: " + plugin_name_temp.join(", ") + "_");
+    }
+  }
+);
+
+Module(
+  {
+    pattern: "remove ?(.*)",
+    fromMe: true,
+    desc: "Remove external plugins",
+    type: "user",
+  },
+  async (message, match) => {
+    if (!match) return await message.reply("_Example :_\nremove emoji\nremove all")
+    if (match == "all") { 
+      await delPlugin()
+      return await message.send("_All plugins deleted Successfully_");
+    }
+    const isDeleted = await delPlugin(match)
+    if (!isDeleted) return await message.reply(`_Plugin ${match} not found_`);
+    delete require.cache[require.resolve("./" + match + ".js")]
+    fs.unlinkSync("./plugins/" + match + ".js");
+    await message.reply(`_Plugin ${match} deleted_`);
+  }
+);
