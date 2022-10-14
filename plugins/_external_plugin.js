@@ -1,5 +1,4 @@
 const {
-  Module,
   PluginDB,
   setPlugin,
   getPlugin,
