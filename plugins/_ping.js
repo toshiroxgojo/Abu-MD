@@ -12,7 +12,7 @@ Module(
     await message.sendMessage("❮ _Testing Bot Ping_ ❯");
     const end = new Date().getTime();
     return await message.sendMessage(
-      "Response IN " + (end - start) + " MS_"
+      "_Response IN " + (end - start) + " MS_"
     );
   }
 );
