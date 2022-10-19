@@ -6,10 +6,10 @@
   "stack": "container",
   "env": {
    "SESSION_ID": {
-      "description": "session id",
-      "required": false,
-      "value": ""
-    },
+   "description": "Add your session id heren which you got after scanning the QR",
+   "required": true,
+   "value": ""
+		},
     "LOGS": {
       "description": "need to show message logs ?",
       "required": false,
