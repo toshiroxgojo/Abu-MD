@@ -82,7 +82,7 @@ Module(
     type: "user",
   },
   async (message, match) => {
-    if (!match) return await message.reply("_Example :_\nremove emoji\nremove all")
+    if (!match) return await message.reply("_Example :_\nremove emoji\n_remove all_")
     if (match == "all") { 
       await delPlugin()
       return await message.send("_All plugins deleted Successfully_");
