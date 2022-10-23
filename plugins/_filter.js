@@ -5,7 +5,6 @@ const {
   toggleFilter,
 } = require("../lib/db/filters");
 const Config = require('../config');
-const bgm = require('../temp/bgm');
 const { Module, isPublic, tiny, handler } = require("../lib");
 const Lang = {
   FILTER_DESC:
@@ -102,9 +101,3 @@ Module({ on: "text", fromMe: isPublic }, async (message, match) => {
     }
   });
 });
-
-
-Module({ on: "text", fromMe: isPublic }, async (message, match) => {
-    await message.sendMessage( message.from, { audio: { url: bgm.eda }, mimetype: "audio/mp4",ptt: true}, { quoted: message } );
-});
-
