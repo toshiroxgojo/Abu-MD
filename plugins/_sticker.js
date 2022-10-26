@@ -2,7 +2,6 @@ const config = require("../config");
 const { Module, isPublic, getJson, sleep, tiny } = require("../lib/");
 const { Image } = require("node-webpmux");
 
-
 Module(
   {
     pattern: "sticker",
@@ -22,13 +21,12 @@ Module(
   }
 );
 
-
 Module(
   {
     pattern: "tgs",
     fromMe: isPublic,
     desc: "Download Sticker From Telegram",
-    type: "Tool",
+    type: "tool",
   },
   async (message, match) => {
     if (!match)
@@ -62,7 +60,6 @@ Module(
   }
 );
 
-
 Module(
   {
     pattern: "take",
@@ -85,7 +82,6 @@ Module(
     );
   }
 );
-
 
 Module(
   {
