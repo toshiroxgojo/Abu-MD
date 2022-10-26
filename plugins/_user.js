@@ -1,6 +1,5 @@
 const { Module } = require("../lib");
 
-
 Module(
   {
     pattern: "setpp ",
@@ -17,7 +16,6 @@ Module(
   }
 );
 
-
 Module(
   {
     pattern: "setname",
@@ -31,7 +29,6 @@ Module(
     return await message.reply(`_Username Updated : ${match}_`);
   }
 );
-
 
 Module(
   {
@@ -55,7 +52,6 @@ Module(
   }
 );
 
-
 Module(
   {
     pattern: "unblock",
@@ -78,7 +74,6 @@ Module(
   }
 );
 
-
 Module(
   {
     pattern: "jid",
@@ -92,7 +87,6 @@ Module(
     );
   }
 );
-
 
 Module(
   {
