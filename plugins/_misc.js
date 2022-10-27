@@ -37,3 +37,9 @@ Module(
     return await message.reply(short.link)
   }
 );
+
+Module({pattern: "reverse ?(.*)",fromMe: isPublic}, async (message, match) => {
+    if (!match[1] && !message.reply_message.message) return;        
+    var text = match[1] || message.reply_message.message
+    await message.reply(text.split("").reverse().join(""))
+});
