@@ -2,7 +2,7 @@ const { Module } = require("../lib");
 
 Module(
   {
-    pattern: "setpp ",
+    pattern: "pp ",
     fromMe: true,
     desc: "Set profile picture",
     type: "user",
