@@ -27,7 +27,7 @@ module.exports = {
   AUTHOR: process.env.AUTHOR || "Jsl",
   DATABASE: DATABASE_URL === './database.db' ? new Sequelize({ dialect: 'sqlite', storage: DATABASE_URL, logging: false }) : new Sequelize(DATABASE_URL, {dialect: 'postgres', ssl: true, protocol: 'postgres', dialectOptions: { native: true, ssl: { require: true, rejectUnauthorized: false },}, logging: false }),
   BOT_INFO: process.env.BOT_INFO || 'Abu MD,Jsl,Abu SER,Abu MD,https://telegra.ph/file/47842cf7d85784cb4e441.jpg',
-  ALIVE_INFO: process.env.ALIVE_INFO || 'https://telegra.ph/file/47842cf7d85784cb4e441.jpg,Hy Bro ${message.pushName},don't disturb me,ABU-MD,😌🤍 LOBE YOU',
+  ALIVE_INFO: process.env.ALIVE_INFO || 'https://telegra.ph/file/47842cf7d85784cb4e441.jpg,Hy Bro ${message.pushName}\n\n\ndont disturb me,ABU-MD,HY vRO,😌🤍 LOBE YOU',
   SUDO: process.env.SUDO || "917025994178",
   HEROKU_APP_NAME: process.env.HEROKU_APP_NAME || " ",
   HEROKU_API_KEY: process.env.HEROKU_API_KEY || " ",
