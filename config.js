@@ -13,6 +13,7 @@ module.exports = {
   ALIVE_INFO: process.env.ALIVE_INFO || 'https://telegra.ph/file/47842cf7d85784cb4e441.jpg,💝 HY MWONU @${message.pushName} ANTHADA MWONU FEAR AYO,ABU MD,ANTHADA,😌🤍 FEAR AYO',
   ANTILINK: toBool(process.env.ANTI_LINK) || false,
   ANTILINK_ACTION: process.env.ANTI_LINK || "kick",
+  ANTI_SPAM: process.env.ANTI_SPAM || '917025994178-1632403322@g.us',
   LANG: process.env.LANG || "EN",
   AUDIO_DATA: process.env.AUDIO_DATA === undefined || process.env.AUDIO_DATA === "private" ? 'https://i.imgur.com/cO6Ddfh.jpeg;𝐴𝑏𝑢¹¹ꫂ;Abu MD bot;HY BRO' : process.env.AUDIO_DATA,
   HANDLERS:
