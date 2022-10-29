@@ -7,7 +7,7 @@ const trueCaller = async (num) => {try { var res = await find(num,'',message.cli
 for (let i = 0; i < 6; i++){
     var _result = await trueCaller(user.replace( /^\D| +/g, ''))
     if (i === 5 || _result === false) {
-        return await message.sendMessage("_Error, try again!_")
-    } else return await message.sendMessage(_result)
+        return await message.reply("_Error, try again!_")
+    } else return await message.reply(_result)
 }
 });
