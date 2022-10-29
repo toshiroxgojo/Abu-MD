@@ -94,27 +94,34 @@
         });
     }));
     
-    Module({
-        pattern: 'setvar ?(.*)',
-        fromMe: true,
-        desc: Lang.SETVAR_DESC,
-        type: 'owner'
-    }, (async (message, match) => {
-    
-        if (match[1] === '' || !match[1].includes(":")) return await message.reply(Lang.KEY_VAL_MISSING)
-    
-        if ((varKey = match[1].split(':')[0]) && (varValue = match[1].replace(match[1].split(':')[0] + ":", ""))) {
-            await heroku.patch(baseURI + '/config-vars', {
-                body: {
-                    [varKey]: varValue
-                }
-            }).then(async (app) => {
-                await message.reply(Lang.SET_SUCCESS.format(varKey, varValue))
-            });
-        } else {
-            await message.reply(Lang.INVALID)
-        }
-    }));
+    Module(
+  {
+    pattern: "setvar ",
+    fromMe: true,
+    type: "heroku",
+    desc: "Set heroku env",
+    type: "heroku",
+  },
+  async (message, match) => {
+    if (!match)
+      return await message.reply(`_Example: .setvar SUDO:917025994178`);
+    const [key, value] = match.split(":");
+    if (!key || !value)
+      return await message.reply(`_Example: .setvar SUDO:917025994178`);
+    heroku
+      .patch(baseURI + "/config-vars", {
+        body: {
+          [key.toUpperCase()]: value,
+        },
+      })
+      .then(async () => {
+        await message.reply(`_${key.toUpperCase()}: ${value}_`);
+      })
+      .catch(async (error) => {
+        await message.reply(`HEROKU : ${error.body.message}`);
+      });
+  }
+);
     
     
     Module({
