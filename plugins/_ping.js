@@ -9,10 +9,10 @@ Module(
   },
   async (message, match) => {
     const start = new Date().getTime();
-    await message.sendMessage("❮ _Testing Bot Ping_ ❯");
+    await message.reply("*_Testing Ping_.....*");
     const end = new Date().getTime();
-    return await message.sendMessage(
-      "_Response In " + (end - start) + " MS_"
+    return await message.reply(
+      "*_Response In " + (end - start) + " MS_....*"
     );
   }
 );
