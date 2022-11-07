@@ -91,6 +91,6 @@ Module(
     if (!isDeleted) return await message.reply(`_Plugin ${match} not found_`);
     delete require.cache[require.resolve("./" + match + ".js")]
     fs.unlinkSync("./plugins/" + match + ".js");
-    await message.reply(`_Plugin ${match} deleted_`);
+    await message.reply(`*_Plugin ${match} deleted_*`);
   }
 );
