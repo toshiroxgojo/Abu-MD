@@ -93,12 +93,11 @@ Module(
     type: "user",
   },
   async (message, match) => {
-    return await message.send(
+    return await message.reply(
       message.mention[0] || message.reply_message.jid || message.jid
     );
   }
 );
-
 Module(
   {
     pattern: "react ?(.*)",
