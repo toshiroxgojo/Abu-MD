@@ -17,9 +17,9 @@ Module(
     type: 'heroku',
   },
   async (message) => {
-    await message.send(`_Restarting_`)
+    await message.reply(`_Restarting_`)
     await heroku.delete(baseURI + '/dynos').catch(async (error) => {
-    await message.send(`HEROKU : ${error.body.message}`);})
+    await message.reply(`HEROKU : ${error.body.message}`);})
   }
 );
 
@@ -34,7 +34,7 @@ Module(
     await heroku.get(baseURI + '/formation').then(async (formation) => {
     await message.send(`_Shuttind down._`)
     await heroku.patch(baseURI + '/formation/' + formation[0].id, { body: { quantity: 0 }, }) }).catch(async (error) => {
-    await message.send(`HEROKU : ${error.body.message}`);})
+    await message.reply(`HEROKU : ${error.body.message}`);})
   }
 );
 
@@ -46,15 +46,15 @@ Module(
     type: "heroku",
   },
   async (message, match) => {
-    if (!match) return await message.sendMessage(`_Example: .setvar SUDO:917025994178_`);
+    if (!match) return await message.reply(`_Example: .setvar SUDO:917025994178_`);
     const [key, value] = match.split(":");
-    if (!key || !value) return await message.sendMessage(`_Example: .setvar SUDO:7025994178_`);
+    if (!key || !value) return await message.reply(`_Example: .setvar SUDO:7025994178_`);
     heroku.patch(baseURI + "/config-vars", {
     body: { [key.toUpperCase()]: value },
     }).then(async () => {
-    await message.sendMessage(`_${key.toUpperCase()}: ${value}_`);
+    await message.reply(`_${key.toUpperCase()}: ${value}_`);
     }).catch(async (error) => {
-    await message.sendMessage(`HEROKU : ${error.body.message}`);
+    await message.reply(`HEROKU : ${error.body.message}`);
     });
   }
 );
@@ -67,17 +67,17 @@ Module(
     type: "heroku",
   },
   async (message, match) => {
-    if (!match) return await message.sendMessage(`_Example: delvar sudo_`);
+    if (!match) return await message.reply(`_Example: delvar sudo_`);
     heroku.get(baseURI + "/config-vars").then(async (vars) => {
     const key = match.trim().toUpperCase();
     if (vars[key]) { await heroku.patch(baseURI + "/config-vars", {
     body: { [key]: null },
     });
-    return await message.sendMessage(`_Deleted ${key}_`);
+    return await message.reply(`_Deleted ${key}_`);
     }
-    await message.sendMessage(`_${key} not found_`);
+    await message.reply(`_${key} not found_`);
     }).catch(async (error) => {
-    await message.sendMessage(`HEROKU : ${error.body.message}`);
+    await message.reply(`HEROKU : ${error.body.message}`);
     });
   }
 );
@@ -90,15 +90,15 @@ Module(
     type: "heroku",
   },
   async (message, match) => {
-    if (!match) return await message.sendMessage(`_Example: getvar sudo_`);
+    if (!match) return await message.reply(`_Example: getvar sudo_`);
     const key = match.trim().toUpperCase();
     heroku.get(baseURI + "/config-vars").then(async (vars) => {
     if (vars[key]) {
-    return await message.sendMessage("_{} : {}_".replace("{}", key).replace("{}", vars[key]));
+    return await message.reply("_{} : {}_".replace("{}", key).replace("{}", vars[key]));
     }
-    await message.sendMessage(`${key} not found`);
+    await message.reply(`${key} not found`);
     }).catch(async (error) => {
-    await message.sendMessage(`HEROKU : ${error.body.message}`);
+    await message.reply(`HEROKU : ${error.body.message}`);
     });
   }
 );
@@ -116,9 +116,9 @@ Module(
     for (const key in keys) {
     msg += `${key} : ${keys[key]}\n\n`;
     }
-    return await message.sendMessage(msg + "```");
+    return await message.reply(msg + "```");
     }).catch(async (error) => {
-    await message.sendMessage(`HEROKU : ${error.body.message}`);
+    await message.reply(`HEROKU : ${error.body.message}`);
     });
   }
 );
