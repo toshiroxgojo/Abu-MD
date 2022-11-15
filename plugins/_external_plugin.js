@@ -87,10 +87,30 @@ Module(
       await delPlugin()
       return await message.send("_All plugins deleted Successfully_");
     }
+    
     const isDeleted = await delPlugin(match)
     if (!isDeleted) return await message.reply(`_Plugin ${match} not found_`);
     delete require.cache[require.resolve("./" + match + ".js")]
     fs.unlinkSync("./plugins/" + match + ".js");
-    await message.reply(`*_Plugin ${match} deleted_*`);
+      let buttonMessage = {
+      text: `_${match} plugin deleted successfuly...._`,
+      templateButtons: [
+        {
+          index: 1,
+          urlButton: {
+            displayText:"𝙶𝙸𝚃𝙷𝚄𝙱📝",
+            url: 'https://github.com/Afx-Abu/Abu-MD/fork',
+          },
+        },
+        {
+          index: 2,
+          quickReplyButton: {
+            displayText: "𝐑𝐄𝐒𝐓𝐀𝐑𝐓",
+            id: `.rebot`,
+          },
+        },
+      ],
+    };
+     await message.sendMessage(buttonMessage, {}, "template");
   }
-);
+);    
