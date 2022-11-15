@@ -129,6 +129,35 @@ Module({
         desc: "Change bot mode to public & private",
         type: 'config'
     }, (async (message, match) => {
+    let buttonMessage = {
+      text: `*Working mode control panel*`,
+      footer: `Bot is currently running on "+Config.MODE+" mode now`,
+      templateButtons: [
+        {
+          index: 1,
+          urlButton: {
+            displayText:"𝙶𝙸𝚃𝙷𝚄𝙱📝",
+            url: 'https://github.com/Afx-Abu/Abu-MD/fork',
+          },
+        },
+        {
+          index: 2,
+          quickReplyButton: {
+            displayText: "PUBLIC",
+            id: `.setvar MODE:public`,
+          },
+        },
+        index: 2,
+          quickReplyButton: {
+            displayText: "PRIVATE",
+            id: `.setvar MODE:private`,
+          },
+        },
+      ],
+    };
+     await message.sendMessage(buttonMessage, {}, "template");
+  }
+); 
         const buttons = [
             {buttonId:  '.setvar MODE:public', buttonText: {displayText: 'PUBLIC'}, type: 1},
             {buttonId: '.setvar MODE:private', buttonText: {displayText: 'PRIVATE'}, type: 1}
