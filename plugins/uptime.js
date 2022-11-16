@@ -1,6 +1,6 @@
 const {Module, isPublic} = require('../lib/')
 Module({
-  pattern: 'uptime',
+  pattern: 'runtime',
   fromMe: isPublic,
   type: 'utility',
   desc: 'Shows system (OS) /process uptime'
