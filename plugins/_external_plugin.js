@@ -106,7 +106,7 @@ Module(
           index: 2,
           quickReplyButton: {
             displayText: "𝐑𝐄𝐒𝐓𝐀𝐑𝐓",
-            id: `.rebot`,
+            id: `.restart`,
           },
         },
       ],
