@@ -67,6 +67,8 @@
       "raganork-bot": "2.0.7",
       "imgur": "2.2.0",
       "aes256":"1.1.0",
+      "secktor-pack": "latest",
+      "ytdl-secktor": "latest",
       "pastebin-js": "^1.0.6"
    }
 }
