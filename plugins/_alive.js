@@ -1,4 +1,4 @@
->const events = require("../lib/utils");
+const events = require("../lib/utils");
 const {
   Module,
   isPublic,
