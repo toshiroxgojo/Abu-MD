@@ -18,7 +18,7 @@ const audios = "https://i.imgur.com/MGCyHxB.jpeg";
 Module
 	(
 		{
-			pattern: "menu?(.*)",
+			pattern: "alive?(.*)",
 			fromMe: isPublic,
 			type: "menu",
 		},
