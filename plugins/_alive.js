@@ -1,4 +1,4 @@
- const events = require("../lib/utils");
+>const events = require("../lib/utils");
 const {
   Module,
   isPublic,
@@ -32,21 +32,111 @@ Module
     let [date, time] = new Date()
       .toLocaleString("en-IN", { timeZone: "Asia/Kolkata" })
       .split(",");
-    let menu = `❖━━━━ ❮❮ *ᴍᴇɴᴜ* ❯❯ ━━━━━❖
- *User : ${message.pushName}*
- *Time : ${time}*
+    let menu = `•━━━━ ❮❮ *𝙱𝙾𝚃 𝙼𝙴𝙽𝚄* ❯❯ ━━━━━•
+ ––––––━━━━━━━━•
+│☘︎ *𝙱𝚘𝚝 𝙸𝚗𝚏𝚘*
+┣━━━━━━━━┅┅
+├[ *𝙾𝚠𝚗𝚎𝚛* ]— *𝙹𝚜𝚕*
+│ *User : ${message.pushName}*
+│ *Time : ${time}*
+│ *Number :919497206865*
+┗––––––━━┅┅┅
+  
+ *CONFIG* 乂
+
+× ​.*Mode*
+
+ *CONVERTOR* 乂
+
+× ​.*Fancy*
+× ​.*Sticker*
+
+ *EDIT* 乂
+
+× ​.*Mp3*
+× ​.*Photo*
+
+ *HEROKU* 乂
  
-*ʙᴜɪʟᴅ-ᴏᴘᴇʀᴀᴛᴇ-ᴛʀᴀɴsғᴇʀ  ʙᴏᴛ  ɪs  ᴀ ᴄᴏᴍᴘᴜᴛᴇʀ  ᴘʀᴏɢʀᴀᴍ  ʀᴜɴ  ᴏɴ  ᴡʜᴀᴛsᴀᴘᴘ  ᴛʜᴀᴛ ɪs sᴘᴇᴄɪғɪᴄᴀʟʟʏ ᴍᴀᴅᴇ ᴛᴏ ᴅᴏ*
+× ​.*Restart*
+× .*Shutdown*
+× ​.*Setvar*
+× ​.*Delvar*
+× ​.*Getvar*
+× ​.*Allvar*
+× ​.*Setsudo*
+× ​.*Delsudo*
+× ​.*Getsudo*
 
- *ᴡʜᴀᴛsᴀᴘᴘ ᴡᴏʀᴋs  ᴀᴜᴛᴏᴍᴀᴛɪᴄɴ, ᴡʜᴀᴛsᴀᴘᴘ  ʙᴏᴛ  ɪs  ᴅᴇsɪɢɴᴇᴅ  ɪɴ  sᴜᴄʜ  ᴀ ᴡᴀʏ  ᴛʜᴀᴛ  ɪᴛ  ᴄᴀɴ  ʙᴇ  ᴜsᴇᴅ  ᴡɪᴛʜ  ᴄᴏɴᴠᴇɴɪᴇɴᴄᴇ, ᴀɴᴅ ᴍᴀʏ ʜᴀᴠᴇ ʟɪᴛᴛʟᴇ ʙᴜɢs, ᴛʜᴇʀᴇ ᴀʀᴇ ғᴇᴀᴛᴜʀᴇs ᴏғ ᴛʜɪs  ᴡʜᴀᴛsᴀᴘᴘ  ʙᴏᴛ  ᴡɪʟʟ  ᴅᴇғɪɴɪᴛᴇʟʏ  ʜᴇʟᴘ  ʏᴏᴜ  ᴛᴏ  ʜᴀᴠᴇ  ғᴜɴ , ᴇᴛᴄ.* 
+ *MISC* 乂
 
-@⁨ī.am/◈┈┉♞┉┈◈⁩⁩⁩⁩⁩`;
+× ​.*React*
+× ​.*Filter*
+× ​.*Stop*
+× ​.*Stop*
+× ​.*Getqr*
+× ​.*Reverse*
+× ​.*Eval*
+× ​.*Yu*
+× ​.*Ak*
+× ​.*Ak*
+× ​.*Ty*
+× ​.*Mode*
+× ​.*Test*
+
+ *OWNER* 乂
+
+× ​.*Update*
+
+ *SEARCH* 乂
+
+× ​.*True*
+
+ *TOOL* 乂
+
+× ​.*Bilty*
+× ​.*Tgs*
+× ​.*Take*
+
+ *TYPE* 乂
+
+× ​.*Test21*
+× ​.*Welcome*
+× ​.*Goodbye*
+× ​.*GetExif*
+
+ *USER* 乂
+ 
+× ​.*m*
+× .*Remove*
+× ​.*Ping*
+× ​.*Pp*
+× ​.*Setname*
+× ​.*Setbio*
+× .*Block*
+× .*Unblock*
+× ​.*Jid*
+× ​.*React*
+
+  *UTILITY* 乂
+
+×  .*Age*
+× ​.*Cntd*
+× ​ .*Runtime*
+× ​.*Url*
+
+  *WHATSAPP* 乂
+
+× ​.*Pin*
+× ​.*Unpain*
+× .*Archive*
+× .*Unarchive*`;
     return await message.client.sendMessage(message.jid, {
       image: { url: 'https://i.imgur.com/MCRx4Tr.jpeg' },
-      caption: ' *『 ɪ ɴ ᴛ ʀ ᴏ ᴅ ᴜ ᴄ ᴛ ɪ ᴏ ɴ 』* ',
+      caption: ' *『 ʙᴏᴛ ɪɴғᴏ 』* ',
       footer: menu,
       buttons: [
-        {buttonId: '.bot', buttonText: {displayText: 'ʟɪsᴛᴍᴇɴᴜ'}},
+        {buttonId: '.list', buttonText: {displayText: 'ᴄᴏᴍᴍᴀɴᴅ'}},
       {buttonId: '.ping', buttonText: {displayText: 'sᴘᴇᴇᴅ ᴛᴇsᴛ'}},{buttonId: '.script', buttonText: {displayText: 'sᴄʀɪᴘᴛ ʙᴏᴛ'}}
     ],
 			contextInfo: {
