@@ -46,7 +46,7 @@ Module
       caption: ' *『 ɪ ɴ ᴛ ʀ ᴏ ᴅ ᴜ ᴄ ᴛ ɪ ᴏ ɴ 』* ',
       footer: menu,
       buttons: [
-        {buttonId: '.bot', buttonText: {displayText: 'ʟɪsᴛᴍᴇɴᴜ'}},
+        {buttonId: '.alive', buttonText: {displayText: 'ʟɪsᴛᴍᴇɴᴜ'}},
       {buttonId: '.ping', buttonText: {displayText: 'sᴘᴇᴇᴅ ᴛᴇsᴛ'}},{buttonId: '.script', buttonText: {displayText: 'sᴄʀɪᴘᴛ ʙᴏᴛ'}}
     ],
 			contextInfo: {
