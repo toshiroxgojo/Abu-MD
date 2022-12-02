@@ -1,3 +1,4 @@
+FROM quay.io/afx-abu/abu-md
 ADD https://api.github.com/repos/Afx-Abu/Abu-MD/git/refs/heads/main version.json
 RUN git clone -b main https://github.com/Afx-Abu/Abu-MD /Jsl
 WORKDIR /Jsl
