@@ -2,6 +2,10 @@
   
 <div align="center">
    
+- scan qr code<br>
+
+[Click Here To Scan](https://qr-code-for-md.vercel.app/)
+
 
    
 
