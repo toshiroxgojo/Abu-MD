@@ -1,8 +1,10 @@
-FROM quay.io/afx-abu/abu-md
-ADD https://api.github.com/repos/Afx-Abu/Abu-MD/git/refs/heads/main version.json
-RUN git clone -b main https://github.com/Afx-Abu/Abu-MD /root/Abu/
-WORKDIR /root/Abu/
+FROM node:latest
 ENV TZ=Asia/Kolkata
-RUN yarn install --ignore-engines --network-concurrency 1
-EXPOSE 3000
+RUN git clone https://github.com/Afx-Abu/Abu-MD/ /root/Jsl/
+WORKDIR /root/Jsl/
+COPY package*.json ./
+RUN npm install
+RUN apt -y update && apt -y upgrade && apt -y install ffmpeg git imagemagick python graphicsmagick sudo npm yarn curl && curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash - && sudo apt install -y nodejs && curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add - && echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list && apt -y update && apt -y install yarn && apt autoremove -y && rm -rf /var/lib/apt/lists/*
+ENV DEBIAN_FRONTEND=noninteractive
+EXPOSE 8000
 CMD ["node", "index.js"]
