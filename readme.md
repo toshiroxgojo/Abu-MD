@@ -1,4 +1,4 @@
-## ```Setup```
+## ```Bot Setup```
 
   
 <div align="center">
