@@ -54,7 +54,7 @@
       "imgbb-uploader": "^1.4.0",
       "scraper-x0": "^1.0.6",
       "sqlite3": "^5.0.8",
-      "sequelize": "^6.19.0", 
+      "sequelize": "git+https://github.com/sequelize/sequelize.git", 
       "simple-git": "^3.7.1",
       "util": "^0.12.4",
       "yargs": "^17.2.1",
