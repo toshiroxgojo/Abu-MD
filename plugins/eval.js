@@ -34,7 +34,7 @@ const {
   Serialize,
   processTime,
   Module,
-  parstJid,
+  parseJid,
   parstJid,
 } = require("../lib/");
 const util = require("util");
