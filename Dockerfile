@@ -1,5 +1,7 @@
-RUN git clone https://github.com/Afx-Abu/Abu-MD.git && cd Abu-MD
+RUN git clone https://github.com/Afx-Abu/Abu-MD.git 
 
-RUN npm install
+&& cd Abu-MD
 
-RUN npm start
+&& npm install
+
+&& npm start
