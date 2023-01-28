@@ -5,10 +5,9 @@
    "main": "index.js",
     "type": "commonjs",
     "license": "GPL-3.0",
-    "scripts": {
-     "start": "pm2 start index.js --deep-monitoring --attach --name Abu-MD",
-     "stop": "pm2 stop Abu-MD"
-     },
+     "scripts": {
+    "start": "node index.js"
+  },
    "author": "Jsl",
    "license": "ISC",
    "dependencies": {
