@@ -43,6 +43,6 @@ Module({
   var hours   = Math.floor(sec_num / 3600);
   var minutes = Math.floor((sec_num - (hours * 3600)) / 60);
   var seconds = sec_num - (hours * 3600) - (minutes * 60);
-  var uptime_process = (`_${hours} Hour, ${minutes} minute, ${seconds} second_`)  
+  var uptime_process = (`*_${hours} Hour, ${minutes} minute, ${seconds} second_*`)  
   return await message.reply(`${uptime_process}`);
 }));
