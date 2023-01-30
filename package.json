@@ -2,12 +2,10 @@
    "name": "abu-md",
    "version": "1.0.0",
    "description": "Abu MD - Simple whatsapp Multi Device bot based on @adiwajshing/baileys.",
-   "main": "index.js",
-    "type": "commonjs",
-    "license": "GPL-3.0",
-     "scripts": {
-    "start": "node index.js"
-  },
+   "main": "./Abu-MD/index.js",
+   "scripts": {
+    "start": "supervisor -s index.js"
+   },
    "author": "Jsl",
    "license": "ISC",
    "dependencies": {
