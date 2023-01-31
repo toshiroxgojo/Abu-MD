@@ -43,7 +43,7 @@ Module({pattern:'eval', on: "text", fromMe: true,desc :'Runs a server code'}, as
   if (match.startsWith(">")) {
     //const m = message;
     try {
-      let evaled = await eval(`${match.replace(">", ".", "!")}`);
+      let evaled = await eval(`${match.replace(">", ".")}`);
       if (typeof evaled !== "string") evaled = require("util").inspect(evaled);
       await message.reply(evaled);
     } catch (err) {
