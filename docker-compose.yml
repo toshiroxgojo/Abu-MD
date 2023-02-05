@@ -1,16 +1,11 @@
-x-uffizzi:
-  ingress:
-    service: app
-    port: 80
-
 services:
   app:
     build:
       context: https://github.com/Afx-Abu/Abu-MD
       dockerfile: Dockerfile
-    secrets:
-      - pg_user
-      - pg_password
+    environment:
+      PGUSER: "postgres"
+      PGPASSWORD: "postgres"
     deploy:
       resources:
         limits:
@@ -18,14 +13,6 @@ services:
 
   db:
     image: postgres:9.6
-    secrets:
-      - pg_user
-      - pg_password
-
-  secrets:
-    pg_user:
-      external: true
-      name: "POSTGRES_USER"
-    pg_password:
-      external: true
-      name: "POSTGRES_PASSWORD"
+    environment:
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "postgres"
