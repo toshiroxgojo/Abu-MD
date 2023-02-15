@@ -15,7 +15,7 @@ const DATABASE_URL = process.env.DATABASE_URL === undefined ? "./database.db" : 
 let HANDLER = "false";
 module.exports = {
   VERSION: require("./package.json").version,
-    SESSION_ID: (process.env.SESSION_ID || "").trim(),
+    SESSION_ID: process.env.SESSION_ID || '', //your ssid to run bot
     MODE: process.env.MODE || "public",
     DATABASE: DATABASE_URL === "./database.db" ? new Sequelize({ dialect: "sqlite", storage: DATABASE_URL, logging: false }) : new Sequelize(DATABASE_URL, {dialect: "postgres", ssl: true, protocol: "postgres", dialectOptions: { native: true, ssl: { require: true, rejectUnauthorized: false },}, logging: false }),
     SUDO: process.env.SUDO || "917025994178",
