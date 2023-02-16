@@ -1,5 +1,5 @@
-const { Jsl ,isPublic } = require("../lib/");
-Jsl(
+const { Module ,isPublic } = require("../lib/");
+Module(
   {
     pattern: "ping",
     fromMe: isPublic,
