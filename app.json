@@ -5,62 +5,62 @@
   "repository": "https://github.com/Afx-Abu/Abu-MD",
   "stack": "container",
   "env": {
-   "SESSION_ID": {
-   "description": "Add your session id heren which you got after scanning the QR",
-   "required": true,
-   "value": ""
-		},
+    "ANTI_LINK": {
+      "description": "true/false",
+      "required": false
+    },
+    "ANTILINK_ACTION": {
+      "description": "kick",
+      "required": false
+    },
+    "RMBG_KEY": {
+      "description": "Remove bg api key ",
+      "required": false
+    },
+    "SESSION_ID": {
+      "description": "Your Session ID",
+      "required": true
+    },
+    "HANDLERS": {
+      "description": "prefix for commands, enter false for no prefix",
+      "required": true,
+      "value": ","
+    },
     "LOGS": {
       "description": "need to show message logs ?",
-      "required": false,
-      "value": ""
+      "required": false
+      "value": "true"
+    },
+    "PACKNAME": {
+      "description": "Sticker Packname",
+      "required": false
+      "value": "💔"
+    },
+
+    "GOODBYE_MSG": {
+      "description": "goodbye Message",
+      "required": false
+    },
+    "AUTHOR": {
+      "description": "Sticker Pack AUTHOR",
+      "value": "Abu MD"
     },
     "SUDO": {
       "description": "sudo numbers with country code seperate with , for multiple numbers",
       "required": false,
       "value": "917025994178"
     },
-    "ANTI_LINK": {
-      "description": "true/false",
-      "required": false,
-      "value": ""
-    },
-    "HANDLERS": {
-      "description": "prefix for commands/ using false command work without . ",
-      "required": false,
-      "value": ","
-    },
-    "PACKNAME": {
-      "description": "Sticker Packname",
-      "required": false,
-      "value": "Abu MD"
-    },
-    "GOODBYE_MSG": {
-      "description": "goodbye Message",
-      "required": false,
-      "value": "Good Bye Vro 😇"
-    },
-    "AUTHOR": {
-      "description": "Sticker Pack AUTHOR",
-      "required": false,
-      "value": "Jsl,💔"
-    },
-    "MODE": {
-      "description": "Work Type",
-      "required": false,
-      "value": "public"
+    "HEROKU_APP_NAME": {
+      "description": "Heroku app name, same as above entered",
+      "required": true
     },
     "HEROKU_API_KEY": {
       "description": "Heroku account api key, https://dashboard.heroku.com/account",
       "required": true
-    },
-    "HEROKU_APP_NAME": {
-            "description": "Exact name which you gave at the top",
-            "required": true,
-            "value": ""
+    }
+  }
 }
-  },
-  "addons": [{
+"addons": [{
       "plan": "heroku-postgresql"
     }],
     "buildpacks": [{
