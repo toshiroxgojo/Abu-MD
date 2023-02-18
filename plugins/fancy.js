@@ -12,7 +12,7 @@ Module(
   async (message, match) => {
     if (!message.reply_message || !message.reply_message.text || !match ||isNaN(match)) {
       let text = tiny(
-        "'_Reply to a text or type text after command with a numeric code_\n_Example: .fancy 10 Hello_"
+        "_Reply to a text or type text after command with a numeric code_\n_Hello mention and .fancy 10_"
       );
       listall("Fancy").forEach((txt, num) => {
         text += `${(num += 1)} ${txt}\n`;
@@ -24,7 +24,6 @@ Module(
   }
 );
 
-'Reply to a text or type text after command with a numeric code\n_Example: .fancy 10 Hello_\n                      .fancy Hello world\n                      .fancy <reply> 13
 Module(
   {
     pattern: "quotely",
