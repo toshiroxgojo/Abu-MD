@@ -21,6 +21,7 @@ module.exports = {
   RMBG_KEY: process.env.RMBG_KEY || false,
   BRANCH: "main",
   PACKNAME: process.env.PACKNAME || "Abu,💔",
+  BOT_INFO: process.env.BOT_INFO || 'Abu;Jsl;927025⁸;https://i.imgur.com/P7ziVhr.jpeg;https://chat.whatsapp.com/Dt3C4wrQmt0GG6io1IBIHb',
   WELCOME_MSG:
     process.env.WELCOME_MSG ||
     "Hi @user Welcome to @gname",
