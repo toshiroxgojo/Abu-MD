@@ -1,7 +1,7 @@
 const config = require("../config");
 const { Module, isPublic, getJson, sleep, tiny } = require("../lib/");
 const { Image } = require("node-webpmux");
-
+const { toAudio } = require("../lib/media");
 
 
 Module(
@@ -104,5 +104,20 @@ Module(
     await img.load(await m.quoted.download());
     const exif = JSON.parse(img.exif.slice(22).toString());
     await message.reply(exif);
+  }
+);
+
+Module(
+  {
+    pattern: "mp3",
+    fromMe: isPublic,
+    desc: "converts video/voice to mp3",
+    type: "downloader",
+  },
+  async (message, match, m) => {
+    if (!message.reply_message || (!message.reply_message.video && !message.reply_message.audio)) return await message.reply('Reply at audio or video')  
+    let buff = await m.quoted.download();
+    buff = await toAudio(buff, "mp3");
+    return await message.sendMessage(buff, { mimetype: "audio/mpeg", quoted: message }, "audio");
   }
 );
