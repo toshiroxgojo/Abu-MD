@@ -3,7 +3,7 @@
   "description": "Abu MD - Simple WhatsApp Multi Device Bot",
   "keywords": ["whatsapp-bot", "multi-device", "Jsl", "abu-md", "abu"],
   "repository": "https://github.com/Afx-Abu/Abu-MD",
-  "stack": "container",
+
   "env": {
     "ANTI_LINK": {
       "description": "true/false",
