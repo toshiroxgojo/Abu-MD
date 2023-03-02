@@ -1,24 +1,72 @@
 {
-  "name": "Abu-MD",
-  "description": "whatsapp md bot build with nodejs",
+  "name": "Abu MD",
+  "description": "Abu MD - Simple WhatsApp Multi Device Bot",
+  "keywords": ["whatsapp-bot", "multi-device", "Jsl", "abu-md", "abu"],
   "repository": "https://github.com/Afx-Abu/Abu-MD",
-  "keywords": ["nodejs", "bot", "whatsapp bot", "whatsapp automation", "multi device"],
-  "buildpacks": [
-    {
-      "url": "heroku/nodejs"
+  "stack": "container",
+  "env": {
+    "ANTI_LINK": {
+      "description": "true/false",
+      "required": false
     },
-    {
-      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+    "ANTILINK_ACTION": {
+      "description": "kick",
+      "required": false
     },
-    {
-      "url": "https://github.com/clhuang/heroku-buildpack-webp-binaries.git"
+    "RMBG_KEY": {
+      "description": "Remove bg api key ",
+      "required": false
+    },
+    "SESSION_ID": {
+      "description": "Your Session ID",
+      "required": true
+    },
+    "HANDLERS": {
+      "description": "prefix for commands, enter false for no prefix",
+      "required": true,
+      "value": ","
+    },
+    "LOGS": {
+      "description": "need to show message logs ?",
+      "required": false
+      "value": "true"
+    },
+    "PACKNAME": {
+      "description": "Sticker Packname",
+      "required": false
+      "value": "💔"
+    },
+
+    "GOODBYE_MSG": {
+      "description": "goodbye Message",
+      "required": false
+    },
+    "AUTHOR": {
+      "description": "Sticker Pack AUTHOR",
+      "value": "Abu MD"
+    },
+    "SUDO": {
+      "description": "sudo numbers with country code seperate with , for multiple numbers",
+      "required": false,
+      "value": "917025994178"
+    },
+    "HEROKU_APP_NAME": {
+      "description": "Heroku app name, same as above entered",
+      "required": true
+    },
+    "HEROKU_API_KEY": {
+      "description": "Heroku account api key, https://dashboard.heroku.com/account",
+      "required": true
     }
-  ],
-   "formation": {
-        "worker": {
-            "quantity": 1,
-            "size": "free"
-        }
-    }
+  }
 }
-   
+"addons": [{
+      "plan": "heroku-postgresql"
+    }],
+    "buildpacks": [{
+      "url": "heroku-community/apt"
+      },
+      {
+      "url": "https://github.com/clhuang/heroku-buildpack-webp-binaries.git"
+      }]
+  }
