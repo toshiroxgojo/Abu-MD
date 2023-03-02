@@ -13,6 +13,7 @@
       "@adiwajshing/keyed-db": "^0.2.4",
       "@neeraj-x0/textpro": "^1.0.3",
       "@hapi/boom": "10.0.0",
+      "youtube-yts": "^2.0.0",     
       "acrcloud": "^1.4.0",
       "abu-bot": "^2.4.0",
       "async-g-i-s": "1.0.0",
@@ -68,5 +69,6 @@
       "aes256":"1.1.0",
       "express": "latest",
       "pastebin-js": "^1.0.6"
+      "youtubedl-core": "^4.11.2"
    }
 }
