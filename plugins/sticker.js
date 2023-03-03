@@ -77,7 +77,7 @@ Module(
     if (!message.reply_message && !message.reply_message.sticker)
       return await message.reply("_Reply to sticker_");
     let buff = await m.quoted.download();
-    let Jsl = match.split(,);
+    let Jsl = match.split(',');
     await message.sendMessage(
       buff,
       {
