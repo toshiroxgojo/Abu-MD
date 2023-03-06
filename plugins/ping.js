@@ -2,7 +2,7 @@ const { Module,isPublic } = require("../lib/");
 const { FancyRandom } = require('abu-bot');
 Module(
   {
-    pattern: "rt",
+    pattern: "ping",
     fromMe: isPublic,
     desc: "check bot ping",
     type: "user",
