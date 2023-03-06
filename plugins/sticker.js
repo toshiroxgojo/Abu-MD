@@ -8,7 +8,7 @@ Module(
   {
     pattern: "sticker",
     fromMe: isPublic,
-    desc: "_Converts Photo or video to sticker_",
+    desc: "converts Photo or video to sticker",
     type: "converter",
   },
   async (message, match, m) => {
@@ -30,7 +30,7 @@ Module(
     pattern: "tgs",
     fromMe: isPublic,
     desc: "Download Sticker From Telegram",
-    type: "tool",
+    type: "downloader",
   },
   async (message, match) => {
     if (!match)
@@ -70,7 +70,7 @@ Module(
   {
     pattern: "take",
     fromMe: isPublic,
-    desc: "Changes Exif data of stickers",
+    desc: "change sticker & audio name",
     type: "tool",
   },
   async (message, match, m) => {
@@ -94,7 +94,7 @@ Module(
   {
     pattern: "getexif",
     fromMe: true,
-    desc: "description",
+    desc: "get sticker information",
     type: "type",
   },
   async (message, match, m) => {
@@ -111,11 +111,11 @@ Module(
   {
     pattern: "mp3",
     fromMe: isPublic,
-    desc: "converts video/voice to mp3",
+    desc: "converts video/audio/voice to mp3",
     type: "downloader",
   },
   async (message, match, m) => {
-    if (!message.reply_message || (!message.reply_message.video && !message.reply_message.audio)) return await message.reply('Reply at audio or video')  
+    if (!message.reply_message || (!message.reply_message.video && !message.reply_message.audio)) return await message.reply('Reply at audio/voice/video')  
     let buff = await m.quoted.download();
     buff = await toAudio(buff, "mp3");
     return await message.sendMessage(buff, { mimetype: "audio/mpeg", quoted: message }, "audio");
