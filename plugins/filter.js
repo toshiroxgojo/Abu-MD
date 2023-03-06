@@ -77,7 +77,7 @@ Module(
   }
 );
 
-Module({ on: "text", fromMe: isPublic }, async (message, match) => {
+Module({ on: "text", fromMe: isPublic, dontAddCommandList: true, }, async (message, match) => {
   var filtreler = await getFilter(message.jid);
   if (!filtreler) return;
   filtreler.map(async (filter) => {
