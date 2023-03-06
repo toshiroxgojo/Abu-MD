@@ -28,7 +28,7 @@ Module(
   {
     pattern: "quotely",
     fromMe: isPublic,
-    desc: "makes sticker of text.",
+    desc: "makes sticker of text",
     type: "converter",
   },
   async (message, match) => {
