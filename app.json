@@ -1,10 +1,13 @@
 {
-  "name": "Abu MD",
-  "description": "Abu MD - Simple WhatsApp Multi Device Bot",
-  "keywords": ["whatsapp-bot", "multi-device", "Jsl", "abu-md", "abu"],
-  "repository": "https://github.com/Afx-Abu/Abu-MD",
-  "stack": "container",
-  "env": {
+	"name": "Abu-MD",
+	"description": "Wa Bot.",
+	"keywords": [
+		"whatsapp",
+		"bot"
+	],
+	"repository": "https://github.com/Afx-Abu/Abu-MD",
+	"stack": "container",
+    "env": { 
     "ANTI_LINK": {
       "description": "true/false",
       "required": false
@@ -55,12 +58,13 @@
       "required": true
     },
     "HEROKU_API_KEY": {
-      "description": "Heroku account api key, https://dashboard.heroku.com/account",
-      "required": true
-    }
-  }
-}
-"addons": [{
+            "description": "For updating bot and setting vars remotely",
+            "required": true,
+            "value":""
+             
+        }
+    },
+    "addons": [{
       "plan": "heroku-postgresql"
     }],
     "buildpacks": [{
