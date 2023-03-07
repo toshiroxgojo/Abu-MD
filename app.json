@@ -8,58 +8,74 @@
 	"repository": "https://github.com/Afx-Abu/Abu-MD",
 	"stack": "container",
     "env": { 
-    "ANTI_LINK": {
-      "description": "true/false",
-      "required": false
-    },
-    "ANTILINK_ACTION": {
-      "description": "kick",
-      "required": false
-    },
-    "RMBG_KEY": {
-      "description": "Remove bg api key ",
-      "required": false
-    },
-    "SESSION_ID": {
-      "description": "Your Session ID",
-      "required": true
-    },
-    "HANDLERS": {
-      "description": "prefix for commands, enter false for no prefix",
-      "required": true,
-      "value": ","
-    },
-    "LOGS": {
-      "description": "need to show message logs ?",
-      "required": false
-      "value": "true"
-    },
-    "PACKNAME": {
-      "description": "Sticker Packname",
-      "required": false
-      "value": "💔"
-    },
-    "GOODBYE_MSG": {
-      "description": "goodbye Message",
-      "required": false
-    },
-    "AUTHOR": {
-      "description": "Sticker Pack AUTHOR",
-      "value": "Abu MD"
-    },
-    "SUDO": {
-      "description": "sudo numbers with country code seperate with , for multiple numbers",
-      "required": true,
-      "value": "917025994178"
-    },
-    "HEROKU_APP_NAME": {
-      "description": "Heroku app name, same as above entered",
-      "required": true
-    },
-    "HEROKU_API_KEY": {
+        "HANDLERS": {
+            "description": "Prefix of commands. Can be also false",
+            "required": true,
+            "value":".,"
+        },
+        "ANTILINK_WARN": {
+            "description": "Groups for antilink (JIDS)",
+            "required": false,
+            "value":"jid,jid"
+        },
+        "READ_MESSAGES": {
+            "description": "Bot will read all messages. Can be also false",
+            "required": true,
+            "value":"false"
+        },
+        "READ_COMMAND": {
+            "description": "Bot will read all commands (blue tick). Can be also false",
+            "required": true,
+            "value":"true"
+        },
+       "HEROKU_API_KEY": {
             "description": "For updating bot and setting vars remotely",
             "required": true,
             "value":""
+        },
+        "HEROKU_APP_NAME": {
+            "description": "Exact name which you gave at the top",
+            "required": true,
+            "value":""
+        },
+        "STICKER_DATA": {
+            "description": "Name of stickers created using bot. Can also split using ;",
+            "required": true,
+            "value":"ʀᴀɢᷨᴀͦɴͭᴏʀᴋ"
+        },
+        "CHATBOT": {
+            "description": "AI chatbot",
+            "required": true,
+            "value":"off"
+        },
+        "BOT_NAME": {
+            "description": "Name of AI chatbot",
+            "required": true,
+            "value":"Raganork"
+        },
+        "AUDIO_DATA": {
+            "description": "Name of audio (take) name;name;image(url)",
+            "required": true,
+            "value":"ʀᴀɢᷨᴀͦɴͭᴏʀᴋ;ʀᴀɢᷨᴀͦɴͭᴏʀᴋ;https://2.img-dpreview.com/files/p/E~C1000x0S4000x4000T1200x1200~articles/3925134721/0266554465.jpeg"
+        },
+        "MODE": {
+            "description": "Private or public",
+            "required": true,
+            "value":"private"
+        },
+        "SUDO": {
+            "description": "These numbers can control your bot. seperate with commas",
+            "required": false,
+            "value":"919074309534"
+        },
+        "ALIVE": {
+            "description": "Alive message {image/link}, {sender} can also be used",
+            "required": false,
+            "value":"{pp} Active since {uptime}\n User:{sender}"
+        },
+       "SESSION": {
+            "description": "Your MD session",
+            "required": true
              
         }
     },
@@ -73,4 +89,5 @@
       "url": "https://github.com/clhuang/heroku-buildpack-webp-binaries.git"
       }]
   }
+  
   
