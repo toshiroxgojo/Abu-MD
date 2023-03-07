@@ -37,6 +37,6 @@ Module({
   var minutes = Math.floor((sec_num - (hours * 3600)) / 60);
   var seconds = sec_num - (hours * 3600) - (minutes * 60);
   var uptime_process = (`Runtime: ${hours} Hour(s), ${minutes} minute(s) ${seconds} second(s)`)  
-  var Jsl1 = await FancyRandom(uptime_process)
-    return await message.reply(Jsl1);
+  var Jl1 = await FancyRandom(uptime_process)
+    return await message.reply(Jl1);
 }));
