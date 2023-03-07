@@ -41,7 +41,7 @@
         "GOODBYE_MSG": {
             "description": "good bye ✅ ",
             "required": true,
-            "value":"ʀᴀɢᷨᴀͦɴͭᴏʀᴋ"
+            "value":"bye bye ✅"
         },
         "LOGS": {
             "description": "logs send",
