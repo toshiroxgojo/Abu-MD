@@ -1,5 +1,5 @@
 {
-	"name": "Abu-MD",
+	"name": "Deploy",
 	"description": "Wa Bot.",
 	"keywords": [
 		"whatsapp",
@@ -39,7 +39,6 @@
       "required": false
       "value": "💔"
     },
-
     "GOODBYE_MSG": {
       "description": "goodbye Message",
       "required": false
@@ -50,7 +49,7 @@
     },
     "SUDO": {
       "description": "sudo numbers with country code seperate with , for multiple numbers",
-      "required": false,
+      "required": true,
       "value": "917025994178"
     },
     "HEROKU_APP_NAME": {
@@ -74,3 +73,4 @@
       "url": "https://github.com/clhuang/heroku-buildpack-webp-binaries.git"
       }]
   }
+  
