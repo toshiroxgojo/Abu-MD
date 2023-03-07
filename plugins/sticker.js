@@ -122,17 +122,3 @@ Module(
   }
 );
 
-const { Module, isPublic, getJson } = require("../lib/");
-
-Module({
-	pattern: 'ai ?(.*)',
-	fromMe: isPublic,
-	desc: 'send your asking answer',
-	type: 'misc',
-}, async (message, match) => {
-if (!message.reply_message || !message.reply_message.text || !match ||isNaN(match)) {
-      let text = tiny(
-        "Replay Any Text");
-      let img = await getJson(`https://mfarels.my.id/api/openai-image?text=${match}`)
-await message.client.sendMessage(message.jid,{ image :{ url : img.result } , caption : '' }, { quoted: message })
-});
