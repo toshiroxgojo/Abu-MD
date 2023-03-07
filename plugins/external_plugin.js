@@ -17,7 +17,7 @@ Module(
     pattern: "plugin ?(.*)",
     fromMe: true,
     desc: "Installs External plugins",
-    type: "user",
+    type: "owner",
   },
   async (message, match) => {
     match = match || message.reply_message.text
@@ -80,7 +80,7 @@ Module(
     pattern: "remove ?(.*)",
     fromMe: true,
     desc: "Remove external plugins",
-    type: "user",
+    type: "owner",
   },
 async (message, match) => {
     if (!match) return await message.reply("_Example :_\nremove emoji\nremove all")
