@@ -68,6 +68,7 @@
       "imgur": "2.2.0",
       "aes256":"1.1.0",
       "express": "latest",
+      "ytdl-core": "latest",
       "pastebin-js": "^1.0.6"      
    }
 }
