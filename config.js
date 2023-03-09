@@ -27,7 +27,7 @@ module.exports = {
     process.env.WELCOME_MSG ||
     "Hi @user Welcome to @gname",
   GOODBYE_MSG: process.env.GOODBYE_MSG || "Hi @user It was Nice Seeing you",
-  AUTHOR: process.env.AUTHOR || "ToxicLeo",
+  AUTHOR: process.env.AUTHOR || "Jsl",
   DATABASE_URL: DATABASE_URL,
   DATABASE:
     DATABASE_URL === "./lib/database.db"
