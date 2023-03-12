@@ -15,6 +15,7 @@
       "@hapi/boom": "10.0.0",
       "acrcloud": "^1.4.0",
       "abu-bot": "^2.4.0",
+      "abu-md": "^1.2.1",
       "async-g-i-s": "1.0.0",
       "wa-sticker-formatter": "^4.3.2",
       "awesome-phonenumber": "^2.64.0",
